@@ -1,0 +1,17 @@
+2.1.) ¿Cuál es el error en el código del método para calcular el máximo común divisor?
+
+El error en el código del método para calcular el máximo común divisor es el bucle while. La expresión evaluaba v == 0, cuando tiene que evaluar la expresión mientras sea mayor que 0, ya que incialmente v != 0, por tanto nunca entrará en el bucle. Y en el caso de serlo no se puede realizar una division por 0.
+
+No entra en el bucle por que la expresion evaluada es V == 0  y V nunca puede ser 0. Hay que cambiar ese linea por  while v > 0
+
+2.2.) ¿Qué comandos del depurador utilizó para detectarlo? Describa la sesión de depuración.
+
+Primero se utilizó ruby -rdebug ./gcd.rb para poner en marcha el depurador.
+
+Luego se utilizó el comando "s" para ir ejecutando el código paso por paso, y se detectaba que el programa devolvía u = 6, el cual era el primer valor de u y no el máximo común divisor. esto era por que nunca entraba en el bucle por el error comentado arriba
+
+Posteriormente se corrigió el error para que funcionase correctamente y se usó el comando "c" en el depurador para ejecutar todas las lineas de código y ver si el valor que devolvía era correcto. 
+
+2.3.) Escriba la dirección 'HTTP' del repositorio que contiene el desarrollo de su práctica.
+
+https://github.com/alu0100450705/prct05

@@ -4,5 +4,21 @@ require "./racional.rb"
 require "test/unit"
 
 class Test_Fraccion < Test::Unit::TestCase
+ 
+ def test_suma
+		assert_equal(Fraccion.new(36, 18), Fraccion.new(12, 9).suma(Fraccion.new(10, 3)))
+	end
+
+	def test_resta
+                assert_equal(Fraccion.new(12, 18), Fraccion.new(12, 9).resta(Fraccion.new(-2, 3)))
+   end
+
+	def test_producto
+                assert_equal(Fraccion.new(48, 54), Fraccion.new(12, 9).producto(Fraccion.new(32, 27)))
+  end
+
+	def test_division
+                assert_equal(Fraccion.new(72, 36), Fraccion.new(12, 9).division(Fraccion.new(3, 2)))
+  end
 
 end
